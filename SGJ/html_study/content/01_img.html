@@ -11,8 +11,36 @@
                 - 서비스 : server root 
 
             2. 상대 경로 
+                - 현재 파일 (html)을 기준으로 경로 설정
+                ../ 상위폴더로 이동 
+
+                height , width : 높이 너비 (px , % )
+                    한쪽만 변경시킬 경우 종횡비가 같게 크기 조정
+                    둘다 변경시 종횡비도 가이 변경 
+            
+                    alt : 이미지 설명 , 이미지가 로드 되지 않을 경우 나타남
         -->
         
-        <img src="C:\Users\User\Documents\GitHub\kdt-story\SGJ\html_study\fff\child_01.jpg" alt="">
+        <img src="C:\Users\User\Documents\GitHub\kdt-story\SGJ\html_study\fff\child_01.jpg" alt=""
+        height="100px">
+        <img src="..\fff\child_02.jpg" alt=""
+        height="100px">
+        <img src="child_03.jpg" alt=""
+        height="100px">
+        <img src="aaa/child_04.jpg" alt=""
+        height="100px">
+        <img src="../fff/bbb/son_01.jpg" alt=""
+        height="100px">
+        <hr>
+        <img src="../fff/son_02.jpg" alt=""
+        height="100px" >
+        <img src="../fff/son_02.jpg" alt=""
+        height="100px" width="200px">
+        <img src="../fff/son_02.jpg" alt=""
+        height="200px" width="200px">
+        <hr>
+        <img src="../fff/son_03.jpg" alt="" height="100px">
+        <img src="../fff/son_04.jpg" alt="아들04" height="100px">
+        <img src="../fff/son_05.jpg" alt="아들05" height="100px">
     </body>
 </html>
