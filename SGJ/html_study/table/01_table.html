@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>01_table</title>
+</head>
+
+<body>
+    <h1>01_table</h1>
+    <table border=""> <!--표-->
+        <tr> <!--행-->
+            <td><!--열-->
+                1행 1열
+            </td>
+            <td><!--열-->
+                1행 2열
+            </td>
+            <td><!--열-->
+                1행 3열
+            </td>
+
+        </tr>
+        <tr> <!--행-->
+            <td><!--열-->
+                2행 1열
+            </td>
+            <td><!--열-->
+                2행 2열
+            </td>
+            <td><!--열-->
+                2행 3열
+            </td>
+
+        </tr>
+        <tr> <!--행-->
+            <td><!--열-->
+                3행 1열
+            </td>
+            <td><!--열-->
+                3행 2열
+            </td>
+            <td><!--열-->
+                3행 3열
+            </td>
+
+        </tr>
+        <tr> <!--행-->
+            <td><!--열-->
+                4행 1열
+            </td>
+            <td><!--열-->
+                4행 2열
+            </td>
+            <td><!--열-->
+                4행 3열
+            </td>
+
+        </tr>
+
+    </table>
+    <h2>
+        크기
+    </h2>
+    <!--속성을 유동적으로 변경이 가능할 경우 
+        td > tr > table 
+        속성을 유동적으로 처리못할 경우 큰값 우선
+        -->
+    <!-- 표 전체 크기 -->
+    <table border="" height=60px >
+        <tr height="20px">
+            <td width="100px"></td>
+            <td width="100px"></td>
+            <td width="100px"></td>
+        </tr>
+        <!-- 행 크기 : -->
+        <tr height=5px width="50px">
+            <td width="50px"></td>
+            <td width="200px"></td>
+            <td height=40px></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr height="50px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <!-- td > tr > table -->
+    <h2>색상</h2>
+    <table border="" bgcolor="#ff0" >
+        <tr height="10px">
+            <td width="30px"></td>
+            <td width="30px"></td>  
+        </tr>
+        <tr height="10px" bgcolor="#0f0">
+            <td bgcolor="blue"></td>
+            <td></td>
+        </tr>
+        <tr height="10px"  bgcolor="red">
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
