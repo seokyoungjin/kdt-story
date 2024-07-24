@@ -65,7 +65,7 @@
         속성을 유동적으로 처리못할 경우 큰값 우선
         -->
     <!-- 표 전체 크기 -->
-    <table border="" height=60px >
+    <table border="" height=60px>
         <tr height="20px">
             <td width="100px"></td>
             <td width="100px"></td>
@@ -90,16 +90,158 @@
     </table>
     <!-- td > tr > table -->
     <h2>색상</h2>
-    <table border="" bgcolor="#ff0" >
+    <table border="" bgcolor="#ff0">
         <tr height="10px">
             <td width="30px"></td>
-            <td width="30px"></td>  
+            <td width="30px"></td>
         </tr>
         <tr height="10px" bgcolor="#0f0">
             <td bgcolor="blue"></td>
             <td></td>
         </tr>
-        <tr height="10px"  bgcolor="red">
+        <tr height="10px" bgcolor="red">
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h2>병합</h2>
+    <table border="" width="300px" height="200px">
+
+        <tr height="30px">
+            <td>1_1</td>
+            <td colspan="2">1_2</td>
+            <!-- <td>1_3</td> -->
+        </tr>
+        <tr height="30px">
+            <td>2_1</td>
+            <td rowspan="2">2_2</td>
+            <td>2_3</td>
+        </tr>
+        <tr height="30px">
+            <td>3_1</td>
+            <!-- <td>3_2</td> -->
+            <td>3_3</td>
+
+        </tr>
+        <tr height="30px">
+            <td colspan="3">
+                <table border="" width="300px">
+                    <tr height="30px">
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <h2>테두리</h2>
+    <table border="">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table border="5">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h2>cellspacing</h2>
+    <table border="" cellspacing="10">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table border="" cellspacing="5">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table border="" cellspacing="">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h2>cellpadding</h2>
+    <table border="" cellpadding="10">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table border="" cellpadding="5">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table border="" cellpadding="0">
+        <tr height="10px">
+            <td width="20px"></td>
+            <td width="20px"></td>
+            <td width="20px"></td>
+        </tr>
+        <tr>
+            <td></td>
             <td></td>
             <td></td>
         </tr>
