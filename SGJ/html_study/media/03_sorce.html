@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>03_source</title>
+</head>
+
+<body>
+    <a href="../index.html">홈</a>
+    <h1>03_source</h1>
+    <video width="600px" autoplay muted>
+        <!-- 브라우저에 맞춰 실행가능한 영상으로 재생  
+            3개다 재생 가능할 경우 맨처음 것이 재생
+        -->
+        <source src="../fff/mmm/SampleVideo_1280x720_1mb.mp4">
+        <source src="../fff/mmm/SampleVideo_1280x720_5mb.mp4">
+        <source src="../fff/mmm/sons.mp4">
+    </video>
+
+
+    <video width="400px" autoplay muted>
+        <!-- 브라우저에 맞춰 실행가능한 영상으로  재생
+                nomovie.mp4 가 없으므로 sons.mp4 재생
+            -->
+        <source src="../fff/mmm/nomovie.mp4">
+        <source src="../fff/mmm/sons.mp4">
+    </video>
+
+    <video width="100%" autoplay muted>
+        <source media="(min-width:800px)" src="../fff/mmm/trip.mp4">
+        <source media="(min-width:600px)" src="../fff/mmm/trip2.mp4">
+        <source src="../fff/mmm/trip3.mp4">
+    </video>
+
+    <h2>media</h2>
+    <video width="100%" muted autoplay>
+        <!-- 크기에 따른 재생 source변경 
+        1200px 이상
+        -->
+        <source media="(min-width:1200px)" src="../fff/mmm/SampleVideo_1280x720_1mb.mp4">
+        <!-- 600px 이상 1200px미만 -->
+        <source media="(min-width:600px)" src="../fff/mmm/sons.mp4">
+        <!-- 600px 미만 -->
+        <source src="../fff/mmm/sea.mp4">
+
+    </video>
+</body>
+
+</html> 

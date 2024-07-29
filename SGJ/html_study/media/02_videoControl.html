@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>02_videoControl</title>
+</head>
+
+<body>
+    <a href="../index.html">홈</a>
+    <h1>02_videoControl</h1>
+
+    <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="100px"></video>
+    <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="100px" autoplay muted></video>
+    <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="100px" autoplay muted controls></video>0
+    <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="100px" autoplay muted loop></video>
+    <!-- 2개의 영상을 4개 화면구현하세요
+        1-1 : 컨트롤 바 
+        1-2 : 멈춤
+        2-1 : 자동실행
+        2-2 : 반복
+
+        바둑판 구조 
+        -->
+
+    <h2>2개의 영상을 4개의 화면으로 구현하기</h2>
+    <table>
+        <tr>
+            <td> 
+                <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="150px" controls></video>
+            </td>
+            <td> 
+                <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="150px"></video> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>     
+                <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="150px" controls autoplay muted></video>
+            
+            </td>
+            <td> 
+                <video src="../fff/mmm/SampleVideo_1280x720_1mb.mp4" height="150px" controls autoplay muted loop></video>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>

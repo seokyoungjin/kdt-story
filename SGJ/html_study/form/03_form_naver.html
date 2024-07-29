@@ -1,39 +1,99 @@
 <html>
 
-    <head>
-        <title>naver_form</title>
-    </head>
-    <body>
-        <a href="../index.html">홈</a>
-        <h1>naver_form</h1>
+<head>
+    <title>naver_form</title>
+</head>
 
-        <form action="">
-            <table border="">
-                <tr>
-                    <td>아이디</td>
-                    <td>
-                        <input type="email" name="user" value="@naver.com" >
-                    </td>
-                </tr>
-                <tr>
-                    <td>비밀번호</td>
-                    <td>
-                        <input type="password" name="pw" >
-                    </td>
-                </tr>
-                <tr>
-                    <td>[선택]이메일주소 (비밀번호 찾기) 등 본인확인용</td>
-                    <td>
-                        <input type="email" name="emailCheack" >
-                    </td>
-                </tr>
-                <tr>
-                    <td>이름</td>
-                    <td>
-                        <input type="UserId" >
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </body>
+<body>
+    <a href="../index.html">홈</a>
+    <h1>naver_form</h1>
+
+    <form action="">
+        <table border="">
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="id" placeholder="아이디">
+                </td>
+
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td>
+                    <input type="password" name="pw" placeholder="비밀번호">
+                </td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="email" name="em" placeholder="[선택]이메일주소">
+                </td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td>
+                    <input type="pname" name="username" id="" placeholder="이름">
+                </td>
+            </tr>
+            <tr>
+                <td>생년월일</td>
+                <td>
+                    <input type="date" min="1999-01-01" max="2010-08-27" placeholder="">
+                </td>
+            </tr>
+            <tr>
+                <td>통신사 선택</td>
+                <td>
+                    <select name="phone" id="">
+                        <option>sk</option>
+                        <option>kt</option>
+                        <option>lg</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <!-- <td>성별</td> -->
+                <td colspan="2">
+                    <input type="radio" name="foreigner1" value="1">내국인
+
+                    <input type="radio" name="foreigner2" value="2">외국인
+                    <input type="radio" name="gender" value="m">남
+                    <input type="radio" name="gender" value="w">여
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>전화 </td>
+                <td> <input type="tell" name="ttt" placeholder="휴대전화번호 -제외"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">인증요청</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+    <form action="">
+        <fieldset style="width:40% ;">
+            <legend></legend>
+            <label for="userid">
+                아아디<input type="text" name="" id="userid" placeholder="아이디">
+            </label>
+            <input type="button" name="" id="" value="중복확인">
+            <br />
+            <label for="userpw">
+                비밀번호<input type="password" name="" id="userpw" placeholder="비밀번호">
+            </label>
+            <br />
+            <label for="eamilcheack">
+                [선택]이메일주소<input type="password2" name="" id="eamilcheack" placeholder="[선택]이메일주소">
+            </label>
+
+        </fieldset>
+    </form>
+</body>
+
 </html>

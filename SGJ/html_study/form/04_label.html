@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>
+        04_label
+    </title>
+</head>
+
+<body>
+    <a href="../index.html"></a>
+    <h1> 04_label</h1>
+    <form action="05_labelReg.html">
+        <input type="hidden" name="kind" value="stud">
+        <!-- 
+            type="hidden" 화면에 보이지 않으나 parameter 전송
+
+            label : 폼요소에 이름붙이는 태그
+                    for - 폼요소 id 가 같으면 연결
+                    for 생략 및 label 하위 요소에 input 존재시 
+                    연결
+        -->
+        <label>
+            아이디<input type="text" name="pid">
+        </label>
+        <br />
+        <label for=""> 
+            이름 <input type="text" name="pname" id="">
+        </label>
+        <br />
+        <label for="nic">
+            별명 <input type="text" name="nic" id="" for="nic">
+        </label>
+        <br />
+        <label for="addr">
+            주소 <input type="text" name="ad" id="addr">
+        </label>
+        <br />
+        <label>어른디</label>
+        <input type="text" name="" id="adid">
+
+        <br />
+        <label for="hand">핸드폰</label>
+        <input type="text" name="handphone" id="hand">
+
+        <br/>
+        email  <input type="text" name="email" id="mm">
+        <br/>
+        성별
+        <label><input type="radio" name="gender" value="m">남자</label>
+        <input type="radio" name="gender" value="f">여자
+        <input type="radio" name="gender" value="it">it종사자
+        <fieldset >
+            <legend>취미</legend>
+            <label><input type="checkbox" name="hobby" value="read">독서</label>
+            <label><input type="checkbox" name="hobby" value="music">음악</label>
+            <label><input type="checkbox" name="hobby" value="sleep">잠</label>
+
+        </fieldset>
+   
+        <fieldset>
+            <input type="submit" value="등록" name="" id="">
+        </fieldset>
+    </form>
+
+    <hr/>
+    <label for="mm">엠엠</label>
+</body>
+
+</html>
