@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_WebFont</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Single+Day&display=swap"
+        rel="stylesheet">
+    <!-- 폰트를 사용하기 위해 웹 폰트를 CDN 방식으로 처리  -->
+
+    <style>
+        /* 
+            font-family 글꼴 웹폰트에서 지원받아 사용
+            font-size 글자크기
+            px : 절대크기 
+            em , rem 상대크기 
+
+            rem : root a element -- > html 의 글자크기를 기준으로 비율처리 
+                부모요소의 글자크기를 고려하지않음 
+            2rem : html 이 16이면 32px  아니면 10 px 이면 20px 
+
+            em : element -- > 부모요소의 글자크기 기준으로 비율을 잡는다 
+            2em 부모가 16 이면 32 px  부모가 10 이면 20 
+
+            root = html 
+
+        */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {}
+
+        .sd {
+            font-family: "Single Day", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .ok {
+            font-family: "Nanum Brush Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .mz {
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .swh1 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 8px;
+        }
+
+        .swh2 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 16px;
+        }
+
+        .rem1 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 1rem;
+        }
+
+        .rem2 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 2rem;
+        }
+
+        .em1 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 1em;
+        }
+
+        .em2 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 2em;
+        }
+
+        .em2_em1 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 1em;
+            border: 1px solid #666;
+            margin: 5px;
+        }
+
+        .em2_em2 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 2em;
+            border: 1px solid #666;
+            margin: 5px;
+        }
+
+        .em2_rem1 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-size: 1rem;
+            border: 1px solid #666;
+            margin: 5px;
+        }
+
+        .ww400 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 400;
+        }
+
+        .ww700 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 700;
+        }
+
+        .ww800 {
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 800;
+        }
+
+        .ii {
+            font-style: italic;
+            font-family: "Nanum Gothic", sans-serif;
+
+        }
+
+        .uu {
+            font-family: "Nanum Gothic", sans-serif;
+            text-decoration: underline;
+        }
+        .lt {
+            font-family: "Nanum Gothic", sans-serif;
+            text-decoration: line-through;
+        }
+        .ovl {
+            font-family: "Nanum Gothic", sans-serif;
+            text-decoration: overline;
+        }
+        .dd {
+            font-family: "Nanum Gothic", sans-serif;
+            text-decoration: double;
+        }
+        .dot {
+            font-family: "Nanum Gothic", sans-serif;
+            text-decoration: dotted;
+        }
+
+        .a_l {
+            font-family: "Nanum Gothic", sans-serif;
+            text-align: left;
+        }
+        .a_r {
+            font-family: "Nanum Gothic", sans-serif;
+            text-align: right;
+
+        }
+        /* 행간 행 줄높이 
+         */
+        .lh_30 { /*행높이*/
+            font-family: "Nanum Gothic", sans-serif;
+            line-height: 30px;
+
+        }
+        .lh_8 {
+            font-family: "Nanum Gothic", sans-serif;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>01_WebFont</h1>
+    <h2>글꼴</h2>
+    <h3>single day</h3>
+    <div class="sd">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+    <hr />
+    <h2>글꼴</h2>
+    <h3>Nanum Brush</h3>
+    <div class="ok">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+    <hr />
+    <h2>글꼴</h2>
+    <h3>Nanum Brush</h3>
+    <div class="mz">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+    <hr />
+    <!-- ============================================================== -->
+    <h1>01_WebFont</h1>
+    <h2>글자 두께 크기</h2>
+    <h3>single day</h3>
+    <div class="swh1">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+    <hr />
+    <h2>글꼴</h2>
+    <h3>Nanum Brush</h3>
+    <div class="swh2">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+    <hr />
+    <h2>글꼴</h2>
+    <h3>rem1</h3>
+    <div class="rem1">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+    <hr />
+    <h2>글꼴</h2>
+    <h3>rem2</h3>
+    <div class="rem2">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+
+    </div>
+    <!-- ------------------------------------------------ -->
+    <hr />
+    <h2>글꼴</h2>
+    <h3>em1</h3>
+    <div class="em1">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+    </div>
+
+    <hr />
+    <h2>글꼴</h2>
+    <h3>em2</h3>
+    <div class="em2">
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        12232445<br />
+        !@#$#%%$()<br />
+        <div class="em2_em1">
+            아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+            qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        </div>
+        <div class="em2_em2">
+            아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+            qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        </div>
+        <hr>
+        <div class="em2_rem1">
+            아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+            qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        </div>
+        <div class="em2_rem2">
+            아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+            qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="ww400">
+        <h3>ww400</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <div class="ww700">
+        <h3>ww700</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <div class="ww800">
+        <h3>ww800</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <!-- - -->
+    <hr>
+    <h2>스타일,데코</h2>
+    <div class="ii">
+        <h3>ii</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <div class="uu">
+        <h3>uu</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <div class="lt">
+        <h3>uu</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <div class="ovl">
+        <h3>uu</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <!-- 의미없음 -->
+    <div class="dd">
+        <h3>uu</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <!-- 의미없음 -->
+
+    <div class="dot">
+        <h3>uu</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+
+    <h2>정렬</h2>
+    <div class="a_l">
+        <h3>a_l</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+    <div class="a_r">
+        <h3>a_r</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+    </div>
+
+
+
+    <h2>행간</h2>
+    <div class="lh_30">
+        <h3>lw_30</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eveniet architecto provident? Labore quam asperiores quibusdam accusamus pariatur debitis molestiae dignissimos officiis ipsam maiores dolore consequatur id sapiente, dolorum voluptatibus!
+    </div>
+
+    <div class="lh_8">
+        <h3>lw_30</h3>
+        아기상어 뚜루루 뚜루 귀여운 뚜루루루<br />
+        qwerrere dfdfdf qwerqwe qwewewqeq<br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eveniet architecto provident? Labore quam asperiores quibusdam accusamus pariatur debitis molestiae dignissimos officiis ipsam maiores dolore consequatur id sapiente, dolorum voluptatibus!
+    </div>
+</body>
+
+</html>

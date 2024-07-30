@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_block_inline</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+      
+        div,span,img{
+            /* 
+            div : block -       가로0,세로 0,영향 받음  , 줄바꿈 가능 (영역 잡힘)
+
+            span : inline -     가로X 세로X  줄바꿈 없음 ( 한줄로 쭈욱 )
+
+            img : inline-block  가로 0 세로 0 줄바꿈 0
+            
+            */
+            background-color: yellow;
+            width: 100px;   
+            height: 40px;
+            border: 2px solid red;
+        }
+        .dd3 {
+            display: inline;
+        }
+        .dd4 {
+            display: inline-block;
+        }
+        .sp3 {
+            display: block;
+        }
+        .sp4 {
+            display: inline-block;
+        }
+        .img3 {
+            display: block;
+        }
+        .img4 {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+        <h1>04_block_inline</h1>
+        <h2>div</h2>
+        <div>div</div>
+        <div>div</div>
+        <div class="dd3">div</div>
+        <div class="dd4">div</div>
+        <div>div</div>
+    
+        <h2>span</h2>
+        <span>span</span>
+        <span>span</span>
+        <span class="sp3">span</span>
+        <span class="sp4">span</span>
+        <span>span</span>
+    
+        <h2>image</h2>
+        <img src="../fff/child_01.jpg" alt="">
+        <img src="../fff/child_02.jpg" alt="">
+        <img src="../fff/child_02.jpg" alt="">
+        <img src="../fff/child_02.jpg" alt="">
+        <img  class="img3"src="../fff/son_02.jpg" alt="">
+        <img  class="img4" src="../fff/son_03.jpg" alt="">
+        <img src="../fff/son_04.jpg" alt="">
+</body>
+
+</html>

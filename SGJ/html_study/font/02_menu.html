@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body{ /* 같은 스타일을 여러 선택자에 지정할 때 , 
+            (콤마) 로 구분*/
+            height: 100%;
+            width: 100%;
+        }
+        .tot_v{
+            width: 102px;
+            height: 210px;
+            margin: 0 auto;
+        }
+        .tot_h{
+            width: 510px;
+            height: 42px;
+            margin: 30px auto;
+        }
+        .menu {
+            width: 100px;
+            height: 40px;
+            background-color: #fa0;
+            border: 1px solid #ccc;
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #fdeded;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+            /*  높이만큼 line -height 주면 높이도 가운데로 온다 ~ */
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>02_menu</h1>
+    <div class="tot_v">
+        <div class="menu">회사소개</div>
+        <div class="menu">제품</div>
+        <div class="menu">갤러리</div>
+        <div class="menu">주문</div>
+        <div class="menu">고객센터</div>
+    </div>
+
+    <div class="tot_h">
+        <div class="menu">회사소개</div>
+        <div class="menu">제품</div>
+        <div class="menu">갤러리</div>
+        <div class="menu">주문</div>
+        <div class="menu">고객센터</div>
+    </div>
+</body>
+
+</html>
