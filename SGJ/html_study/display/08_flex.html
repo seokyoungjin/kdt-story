@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_flex</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .big {
+            display: flex;
+            width: 600px;
+            height: 300px;
+            background-color: #ff0;
+            margin: 20px;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #0ff;
+            border: 1px solid #555;
+        }
+        .row {
+            flex-direction: row;
+            /* 기본값 */
+        }
+    </style>
+</head>
+<body>
+    <h1>08_flex</h1>
+    <h2>기본</h2>
+    <div class="big">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+    <h2>row</h2>
+    <div class="big row">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+</body>
+</html>
