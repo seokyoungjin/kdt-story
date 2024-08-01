@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .warpper {
+            position: relative;
+            background-color: yellow;;
+        }
+        .box{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: #fff;
+        }
+        #two {
+            position: absolute;
+            top: 20px;
+            background: blue;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="warpper">
+        <div class="box" id="one">One</div>
+        <div class="box" id="two">TWO</div>
+        <div class="box" id="three">three</div>
+        <div class="box" id="four">four</div>
+    </div>
+</body>
+
+</html>

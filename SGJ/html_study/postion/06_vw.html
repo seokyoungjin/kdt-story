@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_vw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper{
+            /* display: table-cell; */
+            position: relative;
+            float: left;
+            background-color: #ff0;
+            /* width: 25%;
+            height: 100%; */
+            width: 100vw;
+            height: 85vh;
+        }
+
+        .section{
+            position: absolute;
+            overflow: hidden;
+            background-color: #0f0;
+            width: 500px;
+            height: 400px;
+            left : 50%;
+            top:50%;
+            margin-left: -250px;
+            margin-top: -200px;
+        }
+        .long{
+            position: absolute;
+            width: 400vw; 
+            height: 100vh;
+            background-color: blue;
+
+            /*  
+                1vw = viewport width 의 1 / 100
+                1vh = viewport height 의 1 / 100
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="long">
+        <div class="wrapper">
+            <div class="section">
+                <img src="../fff/child_01.jpg" alt="">
+            </div>    
+        </div>
+        <div class="wrapper">
+            <div class="section">
+                <img src="../fff/child_02.jpg" alt="">
+            </div>    
+        </div>
+        <div class="wrapper">
+            <div class="section">
+                <img src="../fff/son_02.jpg" alt="">
+            </div>    
+        </div>
+        <div class="wrapper">
+            <div class="section">
+                <img src="../fff/son_03.jpg" alt="">
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
