@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_child_logo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 700px;
+            height: 150px;
+        }
+
+        .wrapper>div {
+            position: relative;
+            width: 200px;
+            height: 100px;
+        }
+
+
+
+        .wrapper>form {
+            position: absolute;
+            left: 210px;
+            top: 20px;
+            width: 400px;
+            height: 100px;
+        }
+
+        .wrapper > form> input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 50px;
+            border: 3px solid #118d19;
+            font-size: 2rem;
+            line-height: 50px;
+        }
+        .wrapper>form> button {
+            position: absolute;
+            left: 310px;
+            top: 0px;
+            font-size: 1rem;
+            width: 56px;
+            height: 56px;
+            /* font-size: 2rem; */
+            line-height: 56px;
+            text-align: center;
+            color: #fff;
+            background-color: #118d19;
+        }
+        .wrapper>div>img {
+            width: 200px;
+        }
+        .wrapper>form>img {
+            position: absolute;
+            left: 0;
+            top: 60px;
+            width: 20px;
+        }
+        .wrapper>form>ul {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            width: 270px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        span {
+            position: absolute;
+            left: 310px;
+            top: 60px;
+            display: block;
+            width: 40px;
+            height: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        span > div {
+            border: 1px solid #333;
+            border-radius: 3px ;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>02_child_logo</h1>
+    <div class="wrapper">
+        <div>
+            <img src="../fff/img/naver_logo.png" alt="">
+        </div>
+        <form action="">
+            <input type="text"><button>검색</button>
+            <img src="../fff/img/search_24dp_78A75A_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <ul>
+                <li>엔터</li>
+                <li>스포츠Live</li>
+                <li>경제</li>
+                <li>쇼핑투데이</li>
+            </ul>
+            <span>
+                <div><</div>
+                <div>></div>
+            </span>
+        </form>
+    </div>
+</body>
+
+</html>

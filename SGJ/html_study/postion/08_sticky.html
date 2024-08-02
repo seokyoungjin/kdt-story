@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_sticky</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .wrpper {
+            width: 1000px;
+            height: 500px;
+            margin: 20px;
+            background-color: #ff0;
+            position: relative;
+            overflow: auto;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 4px solid #333;
+            z-index: 1;
+        }
+
+        
+        .ab {
+            position: absolute;
+            background-color: rgba(15, 196, 31, 0.5);
+            left: 300px;
+            top: 40px;
+        }
+
+        .ff {
+            /*  fixed
+                화면기준이므로 부모요소와 상관없음
+                첫번째 ff, 두번째 ff 모두 같은 위치
+            */
+            position: fixed;
+            background-color: rgba(98, 30, 208, 0.3);
+            left: 400px;
+            top: 40px;
+        }
+        
+        .sk {
+            /*  fixed
+                화면기준이므로 부모요소와 상관없음
+                첫번째 ff, 두번째 ff 모두 같은 위치
+            */
+            position: sticky;
+            background-color:rgba(255, 0, 0, 0.3);
+            left: 500px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>08_sticky</h1>
+    <div class="box ab">body ab</div>
+    <div class="box ff">body ff</div>
+
+    <div class="wrpper">
+        <div class="box ab">첫번째 ab</div>
+        <div class="box ff">첫번쨰 ff</div>
+        <div class="box sk">첫번쨰 sk</div>
+        <img src="../fff/child_01.jpg" alt="">
+    </div>
+    <div class="wrpper">
+        <div class="box ab">두번쨰 ab</div>
+        <div class="box ff">두번째 ff</div>
+        <div class="box sk">두번째 sk</div>
+        <img src="../fff/child_02.jpg" alt="">
+    </div>
+    <div class="wrpper">
+        <img src="../fff/son_04.jpg" alt="">
+    </div>
+</body>
+
+</html>
