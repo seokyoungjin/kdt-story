@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_hover_menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menus {
+            display: flex;
+        }
+
+        .menus>dl {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            transition-duration: 0.5s;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #fff;
+        }
+
+        .menus>dl:hover {
+            height: 170px;
+        }
+
+        .menus>dl>dt {
+            width: 100px;
+            height: 50px;
+            background-color: #fa0;
+        }
+
+        .menus>dl>dd {
+            height: 40px;
+            width: 100px;
+            background-color: #ff0;
+        }
+
+        /* 햄버거 메뉴 버튼 */
+        .wrap {
+            width: 100%;
+            height: 100%;
+            padding-top: 50px;
+        }
+
+        .menu {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #ccc;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3) inset;
+        }
+
+        .menu:hover {
+            cursor: pointer;
+        }
+
+        .menu span {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            width: 70px;
+            height: 5px;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+            background-color: #000;
+        }
+        .menu span::before,
+        .menu span::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 5px;
+            background-color: #000;
+            transition: all 0.3s ease;
+        }
+        .menu span::before {
+            top: -20px;
+        }
+        .menu span::after {
+            top: 20px;
+        }
+
+
+        .menuss>dl {
+
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            transition-duration: 0.5s;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #fff;
+        }
+
+        .menuss>dl:hover {
+            height: 170px;
+        }
+
+        .menuss>dl>dt {
+            width: 100px;
+            height: 50px;
+            background-color: #fa0;
+        }
+
+        .menuss>dl>dd {
+            height: 40px;
+            width: 100px;
+            background-color: #ff0;
+        }
+
+        .menu:hover+.menuss {
+            display: inline-block;
+            transition:all 0.5s;
+        }
+        .menuss {
+            display: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>09_hover_menu</h1>
+    <div class="menus">
+        <dl>
+            <dt>회사 소개</dt>
+            <dd>인사말</dd>
+            <dd>인사개</dd>
+            <dd>인사소</dd>
+        </dl>
+        <dl>
+            <dt>제품</dt>
+            <dd>니품</dd>
+            <dd>내품</dd>
+            <dd>그늠품</dd>
+        </dl>
+        <dl>
+            <dt>갤러리</dt>
+            <dd>봄</dd>
+            <dd>여름</dd>
+            <dd>여~~~름</dd>
+        </dl>
+        <dl>
+            <dt>고객센터</dt>
+            <dd>공지사항</dd>
+            <dd>자주찾는질문</dd>
+            <dd>질문및답변</dd>
+        </dl>
+    </div>
+
+    <hr>
+    <!-- 햄버거 버튼에다가 마우스를 올렸을때 메뉴가 가로로 샤르르 나오게 하기  -->
+
+    <div class="wrap">
+        <div class="menu">
+            <span></span>
+            <div class="menuss">
+                <dl>
+                    <dt>회사 소개</dt>
+                    <dd>인사말</dd>
+                    <dd>인사개</dd>
+                    <dd>인사소</dd>
+                </dl>
+                <dl>
+                    <dt>제품</dt>
+                    <dd>니품</dd>
+                    <dd>내품</dd>
+                    <dd>그늠품</dd>
+                </dl>
+                <dl>
+                    <dt>갤러리</dt>
+                    <dd>봄</dd>
+                    <dd>여름</dd>
+                    <dd>여~~~름</dd>
+                </dl>
+                <dl>
+                    <dt>고객센터</dt>
+                    <dd>공지사항</dd>
+                    <dd>자주찾는질문</dd>
+                    <dd>질문및답변</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div>
+        <p class="btn">
+            <img src="../fff/img/Hamburger_icon.svg" alt="">
+        </p>
+    </div> -->
+
+
+    
+</body>
+
+</html>
