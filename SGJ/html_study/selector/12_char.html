@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_char</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            margin-left: 50px;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        p::first-letter {
+            background-color: #ff0;
+            font-size: 2rem;
+            padding: 3px;
+            border: 2px solid #00f;
+        }
+
+        P::first-line {
+            font-style: oblique;
+        }
+        p:not(.asdf) {
+            background-color: #0f0;
+        }
+        p::selection {
+            color: gold;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>12_char</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
+            Nesciunt tempora ratione veniam distinctio id impedit, odit <br />
+            consectetur reiciendis minima itaque voluptates aliquid maxime <br />
+            omnis nisi et doloribus qui similique quia.z</p>
+        <p class="asdf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
+            Nesciunt tempora ratione veniam distinctio id impedit, odit <br />
+            consectetur reiciendis minima itaque voluptates aliquid maxime <br />
+            omnis nisi et doloribus qui similique quia.z</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
+            Nesciunt tempora ratione veniam distinctio id impedit, odit <br />
+            consectetur reiciendis minima itaque voluptates aliquid maxime <br />
+            omnis nisi et doloribus qui similique quia.z</p>
+
+    </div>
+</body>
+
+</html>

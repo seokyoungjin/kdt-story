@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_gradient</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-image: url(../fff/img/today.jpg);
+            background-size: 100px 60px;
+        }
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        .box:nth-of-type(1) {
+            background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+        }
+
+        .box:nth-of-type(2) {
+            background: linear-gradient(135deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+        }
+        .box:nth-of-type(3) {
+            background: radial-gradient(ellipse at center, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+        }
+        .box:nth-of-type(4) {
+            background: linear-gradient(135deg, #000000 0%,#2f9dfc 45%,#eef21f 67%,#ff8989 100%);
+        }
+        .box:nth-of-type(5) {
+            background: linear-gradient(135deg, #aa41db 1%,#2a7e8e 19%,#aa41db 21%,#aa41db 44%,#aa41db 44%,#2f9dfc 45%,#eef21f 69%,#eef21f 69%,#aa41db 70%,#ff8989 100%);        }
+        .box:nth-of-type(6) {
+            background: linear-gradient(135deg, rgba(170,65,219,1) 0%,rgba(170,65,219,0.96) 1%,rgba(65,117,94,0) 25%,rgba(39,130,63,0.24) 31%,rgba(139,186,47,1) 50%,rgba(238,242,31,0.24) 69%,rgba(170,65,219,0.2) 70%,rgba(184,77,205,0) 75%,rgba(255,137,137,1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>01_gradient</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+
+</html>
