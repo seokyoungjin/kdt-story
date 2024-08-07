@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_shadowNav</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .wrapper {
+            width: 500px;
+            height: 1200px;
+            background-color: #ff0;
+            /* margin: 0 auto; */
+            position: absolute;
+            left: 50%;
+            top: 150px;
+            margin-left: -250px;
+            
+        }
+
+        .wrapper > div:first-child {
+            width: 500px;
+            height: 100px;
+            background-color: #fa0;
+            position: relative;
+        }
+
+        .wrapper > div:first-child > div:first-child {
+            width: 100px;
+            height: 100px;
+            font-size: 2rem;
+            line-height: 100px;
+            text-align: center;
+            float: left;
+        }
+        .wrapper > div:first-child > div:last-child {
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: right;
+            margin-top: 50px;
+            background-color: greenyellow;
+        }
+        
+        .wrapper > div:nth-child(2) {
+            width: 500px;
+            height: 1000px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+        .wrapper > div:nth-child(2) >img{
+            width: 200px;
+            margin: 20px;
+        }
+        
+        .wrapper > div:last-child {
+            width: 500px;
+            height: 200px;
+            background-color: rgb(255, 0, 174);
+            position: relative;
+        }
+
+        .nav {
+            width: 500px;
+            height: 100px;
+            background-color: rgb(71, 225, 252,0.4);
+            margin: 0 auto;
+            position: fixed;
+            left: 50%;
+            top: 50px;
+            margin-left: -250px;
+            z-index: 1;
+            box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.65);
+        }
+        .sideBar {
+            width: 80px;
+            height: 330px;
+            position: fixed;
+            top: 50px;
+            right: 400px;
+            }
+        .sideBar > .inner {
+                /* border-bottom: 1px solid #000;
+                box-sizing: border-box; */
+        }
+        .sideBar > .inner:last-child {
+            border: none;
+        }
+        .sideBar > .inner:nth-last-of-type(4) {
+            /* display: none; */
+        }
+        .sideBar > .inner > img {
+            width: 80px;
+            height: 80px;
+        }
+        .sideBar > .inner > a > img {
+            width: 80px;
+            height: 80px;
+        }
+        .sideBar {
+            counter-reset: var-count;  /* 변수명 초기화*/
+        }
+
+        .sideBar > .inner::before {
+            counter-increment: var-count;
+            content:counter(var-count);
+        }
+        .top_btn {
+            margin-top: 50px;
+            
+            border-radius: 50px;
+            padding: 5px;
+
+        }
+        .top_btn > a > img {
+            
+            width: 80px;
+            height: 80px;
+            
+        }
+
+        /* 최근 본 상품 이미지 3개 
+
+        이미지1
+        ------
+        이미지2
+        ------
+        이미지3
+        ------
+        top
+        */
+    </style>
+</head>
+
+<body>
+    <h1>03_shadowNav</h1>
+    <div class="nav" id="top">
+        난 메뉴 바지롱~
+    </div>
+
+    <div class="sideBar">
+        <div class="inner">
+            <p></p>
+            <img src="../fff/img/apple_image01.gif" alt="">
+        </div>
+        <div class="inner">
+            <p></p>
+            <img src="../fff/img/apple_image02.jpg" alt="">
+        </div>
+        <div class="inner">
+            <p></p>
+            <img src="../fff/img/apple_image03.jpg" alt="">
+        </div>
+
+        <div class="top_btn">
+            <a href="" id="top">
+                <img src="../fff/img/top_btn.svg" alt="">
+            </a>
+        </div>
+
+        
+    </div>
+
+    <div class="wrapper">
+        <div>
+            <div>로고</div>
+
+            <div>로그인 | 마이페이지 | 회원가입</div>
+        </div>
+        <div>
+            <img src="../fff/child_01.jpg" alt="" align="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maiores ut corrupti veniam neque
+            doloremque eum error, quam temporibus deleniti nihil aperiam repellat, autem assumenda dolore, fuga dolorem
+            accusamus cum.
+            <img src="../fff/child_01.jpg" alt="" align="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maiores ut corrupti veniam neque
+            doloremque eum error, quam temporibus deleniti nihil aperiam repellat, autem assumenda dolore, fuga dolorem
+            accusamus cum.
+            <img src="../fff/child_01.jpg" alt="" align="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maiores ut corrupti veniam neque
+            doloremque eum error, quam temporibus deleniti nihil aperiam repellat, autem assumenda dolore, fuga dolorem
+            accusamus cum.
+            <img src="../fff/child_01.jpg" alt="" align="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maiores ut corrupti veniam neque
+            doloremque eum error, quam temporibus deleniti nihil aperiam repellat, autem assumenda dolore, fuga dolorem
+            accusamus cum.
+            
+        </div>
+        <div>
+            푸터
+        </div>
+    </div>
+</body>
+
+</html>

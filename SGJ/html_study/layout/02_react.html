@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_react</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .warrper {
+            width: 1200px;
+            height: 900px;
+            background-color: #ff0;
+            margin: 0 auto;
+        }
+        .warrper > .logo {
+            width: 200px;
+            height: 100px;
+            background-color: #00f;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .warrper > .container {
+            width: 1000px;
+            height: 650px;
+            background-color: beige;
+            margin: 0 auto;
+            
+        }
+        .warrper > .container > div {
+            float: left;
+            height: 300px;
+            width: 230px;
+            margin: 10px;
+            background-color: pink;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        /* 1200 이하일때 */
+        @media screen and (max-width:1200px) {
+            .warrper {
+                background-color: aqua;
+            }
+            .warrper > .logo {
+                width: 400px;
+            }
+            .warrper > .container {
+                width: 900px;
+            }
+            .warrper > .container > div {
+                width: 400px;
+                margin: 25px;
+            }
+        }
+
+        @media screen and (max-width:540px) {
+            .warrper {
+            width: 540px;
+            height: 2700px;
+            background-color: pink;
+        }
+        .warrper > .logo {
+            margin: 0 auto;
+            width: 450px;
+            height: 100px;
+            background-color: #00f;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .warrper > .container {
+            width: 450px;
+            height: 2600px;
+            background-color: beige;
+            margin: 0 auto;
+            
+        }
+        .warrper > .container > div {
+            float: left;
+            height: 300px;
+            width: 400px;
+            margin: 30px;
+            background-color: pink;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>02_react</h1>
+    <div class="warrper">
+        <div class="logo">
+            로고
+        </div>
+        <div class="container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
