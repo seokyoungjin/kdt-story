@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_transform</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .warrper {
+            width: 600px;
+            height: 700px;
+            border: 1px solid #000;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 3px;
+
+        }
+
+        .move ,.rotate ,.scale ,.skew, .box__{
+            background-color: #fff;
+            margin-left: 200px;
+            height: 1000px
+        }
+
+        .move>div:nth-of-type(1) {
+            transform: translateX(100px);
+        }
+
+        .move>div:nth-of-type(2) {
+            transform: translateX(-100px);
+        }
+
+        .move>div:nth-of-type(3) {
+            transform: translateY(-150PX);
+            /* 음수 :위 || 양수 :아래*/
+        }
+
+        .move>div:nth-of-type(4) {
+            transform: translateX(100PX) translateY(100px);
+
+        }
+
+        .move>div:nth-of-type(5) {
+            transform: translateZ(100px);
+        }
+        .move>div:nth-of-type(6) {
+            transform: translateZ(-100px);
+        }
+        .move>div:nth-of-type(7) {
+            transform: translate(250px, -200px);
+                                /* x        y */
+        }
+        .move>div:nth-of-type(8) {
+            transform: translate3d(-150px, -100px,100px);
+                                /* x        y      z    */
+        }
+        .move>div:nth-of-type(9) {
+            transform: translateX(100%);
+                            /* 자신의 x (width)를 100% 로 기준하여 이동 */
+        }
+        .move>div:nth-of-type(10) {
+            transform: translate(400%,-300%);
+                                /* x        y      z    */
+        }
+
+        /* 회전 */
+        .rotate > div:nth-of-type(1) {
+            /* 단위 deg (일반각도) */
+            transform: rotateZ(30deg);
+        }
+        .rotate > div:nth-of-type(2) {
+            transform: rotateZ(-30deg);
+            /* 양수 = 시계 방향 / 음수 : 반시계방향  */
+        }
+        .rotate > div:nth-of-type(3) {
+            transform:  perspective(100px) rotateX(60deg);
+            /*입체감 perspectiove 먼저사용해야함  
+                100px 대상체와 시점과의 거리 ㅣ 작을수록 왜곡률이 심함
+            */
+        }
+        .rotate > div:nth-of-type(4) {
+            transform: rotateY(60deg);
+        }
+        .rotate > div:nth-of-type(5){
+            transform: rotate(60deg);
+            /* rotateZ 와 같음 */
+        }
+        .rotate > div:nth-of-type(6){
+            transform: rotate3d(0,0,1,60deg);
+            /* x,y,z 각도
+            x,y,z는 회전축의 백터 1 0 0=> rotateZ
+            */
+        }
+        .rotate > div:nth-of-type(7){
+            transform: rotate3d(1,0,1,60deg);
+            /* x,y,z 각도
+                x,y,z는 회전축의 백터 1 0 0=> rotateX
+
+            */
+        }
+        .rotate > div:nth-of-type(8){
+            transform: rotate3d(0,1,0,60deg);
+            /* x,y,z 각도
+                x,y,z는 회전축의 백터 1 0 0=> rotateY
+
+            */
+        }
+        .rotate > div:nth-of-type(9){
+            transform: rotate3d(1,1,1,60deg);
+            /* x,y,z 각도
+                0,0,0, - >1,1,1, 의 선을 연장선으로 하는 축으로
+                60deg 회전
+
+            */
+        }
+        .rotate > div:nth-of-type(10){
+            transform: rotate3d(1,1,0,60deg);
+        }
+        .rotate > div:nth-of-type(11){
+            transform: rotate(60deg);
+            transform-origin: top left;
+        }
+        .rotate > div:nth-of-type(12){
+            transform: rotate(60deg);
+            transform-origin: top right;
+        }
+        .rotate > div:nth-of-type(13){
+            transform: rotate(60deg);
+            transform-origin: bottom left;
+        }
+        .rotate > div:nth-of-type(14){
+            transform: rotate(60deg);
+            transform-origin: bottom right;
+        }
+        /* 확대 축소 */
+        .scale >div:nth-of-type(1){
+            transform: scaleX(2); /*0 <1 <2...?*/
+                                /*축소 <기본 <확대?*/
+                    /* 2배 */
+        }
+        .scale >div:nth-of-type(2){
+            transform: scaleX(0.5); /*0 <1 <2...?*/
+        }
+        .scale >div:nth-of-type(3){
+            transform: scaleY(0.5); /*0 <1 <2...?*/
+        }
+        .scale >div:nth-of-type(4){
+            transform: scaleZ(0.5); /*0 <1 <2...?*/
+        }
+        .scale >div:nth-of-type(5){
+            transform: scale3d(2,0.3,1.6); 
+                        /*     x y    z */
+        }
+        .scale >div:nth-of-type(6){
+            transform: scale3d(2,0.3);         
+        }
+        .scale >div:nth-of-type(7){
+            transform: translate(200px,-100px);
+            transform: rotate(45deg);
+            transform: scale(0,7,2);
+            transform-origin: top left;
+        }
+
+        /* 비틀기 */
+        .skew > div:nth-of-type(1){
+            transform: skewX(30deg); /*x 축 기준 30도 기울이기*/
+        }
+        .skew > div:nth-of-type(2){
+            transform: skewY(30deg); /*y 축 기준 30도 기울이기*/
+        }
+        .skew > div:nth-of-type(3){
+            transform: skew(30deg,15deg); 
+            /*x 축 30도 y축 15 기울이기*/
+        }
+        /* 박스 만들기 */
+        .box__ > div:nth-of-type(1){
+            transform: skewY(30deg);
+        }
+        .box__ > div:nth-of-type(2){
+     
+        }
+    </style>
+</head>
+
+<body>
+    <h1>04_transform</h1>
+    <h2>translate</h2>
+    <div class="move">
+        <div>이동_x</div>
+        <div>이동_</div>
+        <div>이동_</div>
+        <div>이동_xy</div>
+        <div>이동_z+</div>
+        <div>이동_y</div>
+        <div>이동_()</div>
+        <div>이동_xyz</div>
+        <div>이동_z%</div>
+        <div>이동_Xy%</div>
+    </div>
+    <h2>rotate</h2>
+    <div class="rotate">
+        <div>회전_z30도</div>
+        <div>회전_z-30도</div>
+        <div>이동_X60도</div>
+        <div>회전_Y60도</div>
+        <div>회전_S60도</div>
+        <div>회전_3d_001</div>
+        <div>회전_3d_100</div>
+        <div>회전_3D_010</div>
+        <div>회전_3D_111</div>
+        <div>회전_3D_110</div>
+        <div>회전_S60도</div>
+        <div>회전_tl</div>
+        <div>회전_tr</div>
+        <div>회전_bl</div>
+        <div>회전_br</div>
+    </div>
+    <h2>scale</h2>
+    <div class="scale">
+        <div>스케일_x2</div>
+        <div>스케일_0.5</div>
+        <div>스케일_Y0.5</div>
+        <div>스케일_0.5</div>
+        <div>스케일xyz</div>
+        <div>스케일xy</div>
+        <div>이동,회전,스케일_</div>
+        <!--이동 x : 200 , y: -100
+            회전 : 45 왼쪽 위쪽위 모서리
+            확대 : x : 70%, y:200%    
+        -->
+    </div>
+    <h2>skew</h2>
+    <div class="skew">
+        <div>비틀기x_30</div>
+        <div>비틀기_y30</div>
+        <div>비틀기_xy30</div>
+    </div>
+
+    <h2>box_</h2>
+    <div class="box__">
+        <div>옆1</div>
+        <div>천장2</div>
+        <div>앞3</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        section {
+            background-color: #ff0;
+        }
+        section > div:nth-child(3) {
+            background-color: greenyellow;
+        }
+        .test > img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="./aaa.css">
+    <link rel="stylesheet" href="../cs_ff/bbb.css">
+    <style>
+        /* style (link포함)중첩되었을 경우 마지막에 
+        설정됨  */
+        section > div:nth-child(3) {
+            background-color: #0af;
+        }
+    </style>
+</head>
+<body>
+    <h1>import</h1>
+    <section>
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+    </section>
+    <style>
+        article {
+            margin-top: 100px;
+            border: 1px solid #000;
+            padding: 10px;
+            width: 500px;
+            height: 600px;
+        }
+        article > div:nth-child(1) {
+            background-color: #f00;
+        }
+        article > div:nth-child(1) > img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* html 로드시 style 먼저 로드 후 화면 구현 */
+        section > div:nth-child(4) {
+            background-color: #afa;
+        }
+        section > div:nth-child(3) {
+            background-color: #aaa;
+        }
+    </style>
+    <link rel="stylesheet" href="../cs_ff/ccc.css">
+    <article>
+        <div>
+            <img src="../fff/img/apple_image01.gif" alt="">
+        </div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+    </article>
+
+    <div class="test">
+        <img src="../fff/img/apple_image01.gif" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+main {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+.contents {
+    width: 700px;
+    /* height: 490px; */
+}
+.contents > section {
+    width: 658px;
+    height: 100px;
+    border: 2px solid #000;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+}
+aside {
+    margin-top: 20px;
+    width: 200px;
+    height: 310px;
+    border: 2px solid #000;
+    padding: 20px;  
+    /* position: fixed;
+    top: 15%;
+    right: 17%; */
+}
+aside > div {
+    color: #fff;
+    margin-top: 10px;
+    background-color: navy;
+}
+aside > div > a {
+    display: block;
+    color: #fff;
+}

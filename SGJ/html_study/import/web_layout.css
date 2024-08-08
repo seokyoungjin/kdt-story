@@ -1,0 +1,17 @@
+@import "../cs_ff/header.css";
+@import "../cs_ff/main.css";
+@import "../cs_ff/footer.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    word-break: keep-all;
+}
+ul {
+    list-style: none;
+}
+.warrper {
+    width: 1000px;
+    height: 100%;
+    margin: 10px auto 0;
+}

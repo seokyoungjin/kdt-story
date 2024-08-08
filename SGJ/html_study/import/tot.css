@@ -1,0 +1,17 @@
+@import "../cs_ff/sub1.css";
+@import "../cs_ff/sub2.css";
+@import "../cs_ff/sub3.css";
+/* 위에 작성되어야 한다 :  */
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 700px;
+    height: 1000px;
+    border: 1px solid #000;
+    margin: 50px auto;
+}
+header,section,article {
+    padding: 20px;
+}
