@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: relative;
+            left: 0;
+            height: 50px;
+            width: 50px;
+            background-color: #f00;
+            margin: 5px;
+        }
+
+        input:checked+div {
+            background-color: #00f;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            left: 300px;
+        }
+
+        div:nth-of-type(1) {
+            transition-duration: 2s;
+        }
+
+        /* 프로퍼티 */
+        div:nth-of-type(2) {
+            /* 프로퍼티 : 대상만 지연효과  width*/
+            transition-property: width;
+            transition-duration: 2s;
+        }
+
+        div:nth-of-type(3) {
+            /* 프로퍼티 대상만 지연효과 전체  */
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        div:nth-of-type(4) {
+            /* 프로퍼티 대상만 지연효과 전체  */
+            transition-property: width, left;
+            transition-duration: 2s;
+        }
+
+        div:nth-of-type(5) {
+            /* 프로퍼티 대상만 지연효과 전체  */
+            transition: width 4s, left 1s;
+        }
+
+        div:nth-of-type(6) {
+            /* 프로퍼티 대상만 지연효과 전체  */
+            transition: width 4s, left 1s;
+        }
+
+        /* duration 시간지연 */
+        div:nth-of-type(7) {
+            transition-duration: 5s;
+        }
+
+        div:nth-of-type(8) {
+            /* 1s = 1000ms  */
+            transition-duration: 500ms;
+        }
+
+        div:nth-of-type(8):hover {
+            width: 200px;
+            background-color: greenyellow;
+        }
+
+        /* transition- duration */
+        .timing_fn:checked~div {
+            width: 50px;
+            height: 50px;
+            background-color: #f00;
+            border-radius: 0px;
+            left: 300px;
+            transition-duration: 2s;
+        }
+
+        .timing_fn:checked + div {
+            transition-timing-function: ease;
+        }
+
+        .timing_fn:checked + div + div {
+            transition-timing-function: linear;
+        }
+
+        .timing_fn:checked + div+ div + div {
+            transition-timing-function: ease-in;
+        }
+
+        .timing_fn:checked + div + div+ div + div {
+            transition-timing-function: ease-out;
+        }
+
+        .timing_fn:checked +div + div + div+ div + div +div {
+            transition-timing-function: cubic-bezier(.28,.97,.88,.08);
+        }
+        .timing_fn:checked +div + div + div+ div + div +div +div {
+            transition-timing-function: steps(5);
+        }
+        .timing_fn:checked +div + div + div+ div + div +div +div+div {
+            transition-timing-function: steps(5, start);
+            width: 100px;
+            color: #fff;
+        }
+        .timing_fn:checked +div + div + div+ div + div +div +div+div+div {
+            transition-timing-function: steps(5,end);
+            background-color: green;
+        }
+        /* transition-delay */
+        .delay:checked~div {
+            width: 50px;
+            height: 50px;
+            background-color: #f00;
+            border-radius: 0px;
+            left: 300px;
+            transition-duration: 2s;
+        }
+        .delay:checked + div  {
+            transition-delay: 0s;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 50px;
+            background-image: url(../fff/car.jpg);
+            background-size: 100px 100px;
+        }
+        .delay:checked + div+ div {
+            transition-delay: 1s;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 50px;
+        }
+        .delay:checked + div+ div+ div {
+            transition-delay: 3s;
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>05_transition</h1>
+    <!--  자기 혼자서 뭘 하도록 하지는 못한다
+        변하는 기간동안의 시간에 변화라던가 시간의 총량 , 배분 , 누구한테만
+        적용할거냐 , hover ,  클립 , 반응 선택자 , 다른 요소 를 움직이게끔하는것이다 메뉴를 만들때 은근히 편해 ^^     
+    -->
+    <input type="checkbox" name="" id="">
+    <div></div>
+    <h2>transitstion-propoperty</h2>
+    <input type="checkbox" name="" id="">width
+    <div></div>
+    <input type="checkbox" name="" id="">all
+    <div></div>
+    <input type="checkbox" name="" id="">width,left 2s;
+    <div></div>
+    <input type="checkbox" name="" id="">width 4s,left 1s;
+    <div></div>
+    <input type="checkbox" name="" id="">
+    <div></div>
+
+    <h1>05_transition- duration</h1>
+    <input type="checkbox" name="" id="">2s
+    <div></div>
+    <input type="checkbox" name="" id="">500ms
+    <div></div>
+
+    <h1>05_transition-timing-function</h1>
+    <input type="checkbox" class="timing_fn" name="" id="">
+    <div>ease</div>
+    <div>linear</div>
+    <div>ease-in</div>
+    <div>ease-out</div>
+    <div>ease-in-out</div>
+    <div>cubic-bezier</div>
+    <div>step</div>
+    <div>step_start</div>
+    <div>step_end</div>
+
+    <h1>05_transition-delay</h1>
+    <input type="checkbox" class="delay" name="" id="">
+    <div>0s</div>
+    <div>1s</div>
+    <div>2s</div>
+</body>
+
+</html>

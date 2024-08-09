@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_aniRotate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .warpper {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            left: 100px;
+            border-radius: 200px;
+            background-color: rgb(24, 240, 24,0.5);
+        }
+
+        @keyframes rrr {
+            from{
+                transform: rotate(0deg);
+            }to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes sss {
+            from{
+                transform: rotate(10deg);
+            }to{
+                transform: rotate(360deg);
+            }
+        }
+        /* 00시  */
+        .warpper > div {
+            width: 6px;
+            height: 150px;
+            position: absolute;
+            left: 199px;
+            top: 50px;
+            background-color: #fff;
+            box-shadow: 3px 3px 5px #000;
+            animation-name: rrr;
+            /* animation-timing-function: linear; */
+            animation-timing-function: steps(60);
+
+            animation-duration: 3600s;
+            transform-origin: bottom center;
+        }
+        /* 00 초  */
+        .warpper > .s {
+            width: 1px;
+            height: 160px;
+            position: absolute;
+            top: 40px;
+            left: 199px;
+            border-color: #ccc;
+            box-shadow: 3px 3px 5px #000;
+            animation-duration: 60;
+            animation: sss 10s linear infinite;
+        }
+        /* 00분 */
+        .warpper > .m {
+            width: 4px;
+            height: 130px;
+            position: absolute;
+            top: 70px;
+            left: 199px;
+            border-color: #ccc;
+            box-shadow: 3px 3px 5px #000;
+            animation-duration: 60;
+            animation-timing-function: steps(60);
+            animation: sss 360s linear infinite;
+        }
+        /* 가운데 */
+        .warpper > .watch {
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            position: absolute;
+            top: 185px;
+            left: 189px;
+            background-color: #000;
+            z-index: 1;
+        }
+        .look_time {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>08_aniRotate</h1>
+    <div class="warpper">
+        <div></div>
+        <div class="s"></div> 
+        <div class="m"></div>
+        <div class="watch"></div>
+        <div class="look_time">
+        </div>
+    </div>
+
+
+</body>
+</html>
